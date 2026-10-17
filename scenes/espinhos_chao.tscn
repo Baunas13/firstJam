@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cuiuowqhtv02f"]
+
+[ext_resource type="Texture2D" uid="uid://b2j1r84g6nf7b" path="res://assets/sprites/Sci-fi_sprites/Traps/laser_spikes_idle.png" id="1_22upv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwtte"]
+atlas = ExtResource("1_22upv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iws25"]
+atlas = ExtResource("1_22upv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucmhx"]
+atlas = ExtResource("1_22upv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydnjg"]
+atlas = ExtResource("1_22upv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjlsx"]
+atlas = ExtResource("1_22upv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ot6c"]
+atlas = ExtResource("1_22upv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cdrc"]
+atlas = ExtResource("1_22upv")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw5r6"]
+atlas = ExtResource("1_22upv")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8h4m"]
+atlas = ExtResource("1_22upv")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohw66"]
+atlas = ExtResource("1_22upv")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3xgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwtte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iws25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucmhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydnjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjlsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ot6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cdrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw5r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8h4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohw66")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3xgt"]
+size = Vector2(28, 14)
+
+[node name="espinhos_chao" type="AnimatableBody2D" unique_id=13693134]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=485155948]
+sprite_frames = SubResource("SpriteFrames_s3xgt")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.9900913
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1704321410]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_s3xgt")
