@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://blbvyhrja6epb"]
 
 [ext_resource type="PackedScene" uid="uid://c1xqkkcpa1av4" path="res://scenes/player1.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://dehsxdigf5abu" path="res://scenes/player2.tscn" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cewy646gdv4i0" path="res://icon.svg" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://byjkm0m268be0" path="res://scripts/player_2.gd" id="3_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r516b"]
 
@@ -9,9 +12,14 @@
 [node name="Player" parent="." unique_id=1211073068 instance=ExtResource("1_uwrxv")]
 position = Vector2(6, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1306434217]
-position = Vector2(18, -5)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1306434217]
+position = Vector2(12, -5)
 zoom = Vector2(4, 4)
+position_smoothing_speed = 8.69
+
+[node name="Player2" parent="." unique_id=15287364 instance=ExtResource("2_lnu2h")]
+position = Vector2(-23, -4)
+script = ExtResource("3_lbhrr")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1332778973]
 position = Vector2(6, 0)
@@ -19,3 +27,7 @@ position = Vector2(6, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=934713585]
 position = Vector2(0, 2)
 shape = SubResource("WorldBoundaryShape2D_r516b")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1116275188]
+position = Vector2(24, 73)
+texture = ExtResource("2_yqjtg")
